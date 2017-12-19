@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 15, 2017 8:55:50 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.pizza.entity.AlPizza" table="ALPIZZA">
+        <id name="AlPizzaId" type="long">
+            <column name="ALPIZZAID" />
+            <generator class="assigned" />
+        </id>
+        <property name="totalSeats" type="int">
+            <column name="TOTALSEATS" />
+        </property>
+        <property name="availableSeats" type="int">
+            <column name="AVAILABLESEATS" />
+        </property>
+    </class>
+</hibernate-mapping>
