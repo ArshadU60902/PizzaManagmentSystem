@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,16 +8,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-<header> 
-<h1>Al-Pizza</h1>
-<ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li style="float:right"><a href="#about">About</a></li>
-</ul>
-</header>
+	<header>
+	<div class="w3-container w3-teal">
+		<h1>AL-PIZZA</h1>
+	</div>
 
-<h1>Success</h1>
+	<ul>
+		<li><a class="active" href="logout">Logout</a></li>
+
+
+	</ul>
+	</header>
+
+	<h1>Success</h1>
 </body>
 </html>

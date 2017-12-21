@@ -15,80 +15,81 @@
 <title>Insert title here</title>
 </head>
 <body style="margin-left: 25px; margin-right: 25px; margin-top: 10px">
-<div class="w3-container w3-teal">
-  <h1>AL-PIZZA</h1>
-</div>
-<ul>
-  <li><a class="active" href="reserve">Reserve Seats</a></li>
-  <li><a href="viewReserve">View All Reserved Seats</a></li>
-  <li><a href="proceedToCheckOut" >Proceed To CheckOut</a></li>
-  <li style="float:right"><a href="logout">Log Out</a></li>
-</ul>
-	
+	<div class="w3-container w3-teal">
+		<h1>AL-PIZZA</h1>
+	</div>
+	<ul>
+		<li><a class="active" href="reserve">Reserve Seats</a></li>
+		<li><a href="viewReserve">View All Reserved Seats</a></li>
+		<li><a href="proceedToCheckOut">Proceed To CheckOut</a></li>
+		<li><a href="showOrders">View Order</a></li>
+		<li style="float: right"><a href="logout">Log Out</a></li>
+	</ul>
 
 
 
-	<div class="row"  style="padding-left: 15px; padding-right: 15px;">
-    <div style="background-image: url('resources/images/p2.jpg');">
-   
 
-		<c:forEach items="${sessionScope.pizzas}" var="pizza">
-			<div class="col-lg-6"
-				style="float: left;  padding-left: 5px; padding-top: 10px">
+	<div class="row" style="padding-left: 15px; padding-right: 15px;">
+		<div style="background-image: url('resources/images/p2.jpg');">
 
 
-				<form:form action="addToCart" method="post">
+			<c:forEach items="${sessionScope.pizzas}" var="pizza">
+				<div class="col-lg-6"
+					style="float: left; padding-left: 5px; padding-top: 10px">
 
-					<form:hidden path="pizzaId" value="${pizza.pizzaId}" />
-					<c:out value="${ pizza.pizzaName}"></c:out>
-					<br> Price:Rs.
+
+					<form:form action="addToCart" method="post">
+
+						<form:hidden path="pizzaId" value="${pizza.pizzaId}" />
+						<c:out value="${ pizza.pizzaName}"></c:out>
+						<br> Price:Rs.
 				<c:out value="${ pizza.price}/- "></c:out>
-					<br>
+						<br>
 
 
-					<div class="row">
-						<div class="col-sm-2">
-							small <br>
-							<form:radiobutton path="size" value="0"></form:radiobutton>
-							<br> + Rs.0/-
+						<div class="row">
+							<div class="col-sm-2">
+								small <br>
+								<form:radiobutton path="size" value="0"></form:radiobutton>
+								<br> + Rs.0/-
+							</div>
+							<div class="col-sm-2">
+								Medium <br>
+								<form:radiobutton path="size" value="25"></form:radiobutton>
+								<br> + Rs.25/-
+							</div>
+							<div class="col-sm-2">
+								Large <br>
+								<form:radiobutton path="size" value="50"></form:radiobutton>
+								<br> + Rs.50/-
+							</div>
 						</div>
-						<div class="col-sm-2">
-							Medium <br>
-							<form:radiobutton path="size" value="25"></form:radiobutton>
-							<br> + Rs.25/-
-						</div>
-						<div class="col-sm-2">
-							Large <br>
-							<form:radiobutton path="size" value="50"></form:radiobutton>
-							<br> + Rs.50/-
-						</div>
-					</div>
 
 
-					<c:forEach items="${sessionScope.toppings}" var="topping">
-						<br>${topping.toppingName}:
+						<c:forEach items="${sessionScope.toppings}" var="topping">
+							<br>${topping.toppingName}:
 				<form:checkbox value="${topping.toppingId}" path="toppings" />${topping.price}
 				
 			</c:forEach>
-					<div style="float: right;">
-						Qty:
-						<form:input path="quantity" type="number" value="1" min="1"
-							max="100" />
-						<input type="submit" value="AddToCart">
-					</div>
+						<div style="float: right;">
+							Qty:
+							<form:input path="quantity" type="number" value="1" min="1"
+								max="100" />
+							<input type="submit" value="AddToCart">
+						</div>
 
-				</form:form>
+					</form:form>
 
 
 
-			</div>
-		</c:forEach>
-		 </div>
+				</div>
+			</c:forEach>
+		</div>
 	</div>
-<div class="w3-container w3-teal">
-  <h5 style="text-align: center">Al-Pizza Internationals</h5>
-  <p style="text-align: center">order@AlpizzaInternationals.com</p>
-</div>
+	<div class="w3-container w3-teal">
+		<h5 style="text-align: center">Al-Pizza Internationals</h5>
+		<p style="text-align: center">order@AlpizzaInternationals.com</p>
+	</div>
 
 </body>
 </html>
