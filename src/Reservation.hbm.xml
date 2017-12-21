@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated Dec 16, 2017 9:18:33 AM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="com.pizza.entity.Reservation" table="RESERVATION">
+    <class name="com.pizza.entity.Reservation" table="AP_RESERVATION_DETAILS_TB">
         <id name="reservationId" type="long">
             <column name="RESERVATIONID" />
             <generator class="increment" />
