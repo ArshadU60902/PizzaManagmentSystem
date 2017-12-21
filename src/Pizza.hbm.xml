@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated Dec 18, 2017 9:03:17 AM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="com.pizza.entity.Pizza" table="PIZZA">
+    <class name="com.pizza.entity.Pizza" table="AP_PIZZA_DETAILS_TB">
         <id name="pizzaId" type="long">
             <column name="PIZZAID" />
             <generator class="increment" />
