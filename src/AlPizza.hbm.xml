@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated Dec 15, 2017 8:55:50 PM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="com.pizza.entity.AlPizza" table="ALPIZZA_DETAILS_TB">
+    <class name="com.pizza.entity.AlPizza" table="AP_ALPIZZA_DETAILS_TB">
         <id name="AlPizzaId" type="long">
             <column name="ALPIZZAID" />
             <generator class="assigned" />
